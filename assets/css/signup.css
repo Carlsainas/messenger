@@ -1,0 +1,177 @@
+:root{
+    --background:      #0a1019;
+    --family:           'Poppins', sans-serif;
+
+    --green:            #55c57a;
+    --green-ligth:      #7ed56f;
+    --green-dark:       #28b485;
+    --silver:           #e4e7ea;
+}
+
+html, body {
+    font-size: 12px;
+    background-color: #000;
+    background-image: url(../images/signup1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+body{
+    background-color: var(--background);
+    font-family: var(--family);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#background{
+    display: flex;
+    display: -webkit-flex; /* */
+    width: 100%;
+    height: 100vh; 
+}
+
+.account-left{
+    width: 70%;
+    background: linear-gradient(to right bottom, rgba(80, 180, 40, 0.90)50%, transparent 50%);
+    position: relative;
+}
+
+.account-text{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+.account-text h1{
+    margin-bottom: 2rem;
+}
+
+.account-right{
+    width: 30%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-left: 1px solid gray;
+    
+}
+
+.create-account-header{
+    margin-bottom: 45px;
+    color: var(--green-ligth);
+}
+
+.form-area{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.group, .control{
+    font-size: 1.5rem;   
+    color: #ffffff;
+}
+
+.group{
+    margin-bottom: 1.5rem; 
+}
+
+.control{
+    display: block;
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 7px;
+    border: 1px solid var(--silver);
+    transition: all 1s;
+    background-color: transparent;
+}
+
+.control:focus{
+    outline: none;
+    border: 1px solid var(--green-dark);
+}
+
+.file{
+    display: none;
+}
+
+#file-label{
+    display: block;
+    width: 100%;
+    padding: 1.1rem 1rem;
+    border: 1px solid var(--silver);
+    border-radius: 7px;   
+    background: linear-gradient(to right, var(--green-ligth), var(--green-dark));
+    text-align: left;
+}
+
+#file-label:hover{
+    cursor: pointer;
+}
+.uploadCloud{
+    width: 30px;
+    padding-right: 5px;
+}
+
+.btn-create-account{
+    width: 100%;
+    padding: 7px 30px;
+    border-radius: 3rem;
+    background: linear-gradient(to right, var(--green-ligth), var(--green-dark));
+    color: #ffffff;
+   
+}
+
+.btn-create-account:hover{
+    cursor: pointer;
+}
+
+.link{
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    display: block;   
+}
+
+#loginForm,
+#registerForm{
+    display: none;
+}
+
+
+/*  Media */
+@media(max-width: 765px){
+    .account-left{
+        display: none;
+    }
+    .account-right{
+        width: 100%;
+    }
+    .control{
+        background: #e1e4ea;
+        color: #000;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    ::placeholder{
+        color: rgb(34, 31, 31);
+    }
+    .link:hover{
+        color: #fff;
+    }
+}
